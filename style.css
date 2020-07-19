@@ -5,6 +5,7 @@
 body{
     background-image: url("3.gif");
     background-size: cover;
+    height: 95vh;
 }
 
 .paddle{
@@ -16,9 +17,13 @@ body{
     border: 1px solid white;
 
 }
+#one{
+    top:0px;
+    left:0px;
+}
 #two{
-    
-    right:0px
+    top:0px;
+    right:0px;
 }
 #ball{
     position: fixed;
@@ -29,4 +34,24 @@ body{
     border-radius: 50%;
     background-color: blue;
     border: 1px solid white;
+}
+#Inst{
+    color: white;
+    display: flex;
+    font-size: 2rem;
+    justify-content: center;
+}
+.arwname{
+    /* height: 5rem; */
+    padding: 0.5rem;
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+    background-color: white;
+    color: black;
+    margin: 19px;
+    border-radius: 2rem;
+}
+.fa.arrow{
+    font-size: 3rem;
+    margin: 19px;
 }
