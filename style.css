@@ -27,8 +27,8 @@ body{
 }
 #ball{
     position: fixed;
-    top: 50vh;
-    left: 50vw;
+    top: 300px;
+    left: 300px;
     height: 99px;
     width: 100px;
     border-radius: 50%;

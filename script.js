@@ -49,4 +49,29 @@ body.addEventListener("keydown", function(e){
     console.log(e.key);
 })
 
-console.log(body.clientHeight - bar1.clientHeight)
+// console.log(body.clientHeight - bar1.clientHeight)
+let xd = true;
+let yd = true;
+const disp = 1.5;
+function moveball(){
+    let bodyheight = body.clientHeight;
+    let bodyWidth = body.clientWidth;
+    let ballTop = Number(ball.style.top.slice(0, -2));
+    let ballLeft = Number(ball.style.left.slice(0, -2));
+    let ballBottom = Number(ball.style.top.slice(0, -2)) + 100;
+    let ballRight = Number(ball.style.left.slice(0, -2)) + 100;
+
+    if (ballTop <= 0 || ballBottom >= bodyheight) {
+        yd = !yd
+    }
+    
+    if (ballLeft <= 0 || ballRight >= bodyWidth) {
+        xd = !xd;
+    }
+
+    ball.style.top=yd==true?(ballTop-disp)+"px":(ballTop+disp)+"px"
+
+    ball.style.left=xd==true?(ballLeft-disp)+"px":(ballLeft+disp)+"px"
+
+}
+setInterval(moveball,1)
